@@ -1,5 +1,7 @@
 # KThrottler
 
+There is also a Ruby version (for [Rails](http://rubyonrails.org/)), see here: <http://github.com/fredwu/action_throttler>
+
 ## Introduction
 
 KThrottler is an easy to use Kohana module to quickly throttle application actions based on configurable duration and limit. 
