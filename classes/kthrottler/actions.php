@@ -33,7 +33,7 @@ class KThrottler_Actions {
 	{
 		$times_run = DB::select()->from('kthrottler_logs')
 		  ->where('scope', '=', $action)
-		  ->and_where('reference', '=', $this->normamlise_ref($ref))
+		  ->and_where('reference', '=', $this->normalise_ref($ref))
 		  ->and_where('created_at', '>=', $this->datetime_since($this->actions[$action]['duration']))
 		  ->execute()
 		  ->count();
@@ -61,7 +61,7 @@ class KThrottler_Actions {
 		if ($this->can_be_run($action, $ref))
 		{
 			DB::insert('kthrottler_logs', array('scope', 'reference', 'created_at'))
-			  ->values(array($action, $this->normamlise_ref($ref), $this->datetime_since('now')))
+			  ->values(array($action, $this->normalise_ref($ref), $this->datetime_since('now')))
 			  ->execute();
 			
 			return true;
@@ -107,7 +107,7 @@ class KThrottler_Actions {
 	 * @param  mixed  $ref the ref parameter
 	 * @return string      ref id
 	 */
-	private function normamlise_ref($ref)
+	private function normalise_ref($ref)
 	{
 		return (is_int($ref) or is_string($ref)) ? (string)$ref : (string)$ref->id;
 	}
