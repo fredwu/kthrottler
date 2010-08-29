@@ -6,6 +6,7 @@
  * 
  * @link    http://github.com/fredwu/kthrottler
  * @link    http://github.com/fredwu/action_throttler
+ * @package KThrottler
  * @author  Fred Wu
  * @license http://www.opensource.org/licenses/mit-license.php
  */
