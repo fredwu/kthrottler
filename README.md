@@ -1,3 +1,5 @@
+[![](http://stillmaintained.com/fredwu/kthrottler.png)](http://stillmaintained.com/fredwu/kthrottler)
+
 # KThrottler
 
 There is also a Ruby version (for [Rails](http://rubyonrails.org/)), see here: <http://github.com/fredwu/action_throttler>
